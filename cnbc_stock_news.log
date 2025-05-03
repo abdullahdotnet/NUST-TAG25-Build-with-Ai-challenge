@@ -1,0 +1,275 @@
+2025-05-03 20:24:35,140 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline =====
+2025-05-03 20:24:35,156 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-03 20:24:35,157 - __main__ - ERROR - GEMINI_API_KEY environment variable not set
+2025-05-03 20:25:29,866 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline =====
+2025-05-03 20:25:29,911 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-03 20:25:29,912 - __main__ - ERROR - GEMINI_API_KEY environment variable not set
+2025-05-03 20:26:10,204 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline =====
+2025-05-03 20:26:10,246 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-03 20:26:10,266 - __main__ - INFO - Gemini API configured successfully
+2025-05-03 20:26:10,267 - __main__ - INFO - Testing Gemini model: gemini-1.5-flash
+2025-05-03 20:26:11,121 - __main__ - INFO - Gemini model gemini-1.5-flash working. Response: Working
+...
+2025-05-03 20:26:11,122 - __main__ - INFO - Initializing web driver...
+2025-05-03 20:26:12,995 - __main__ - INFO - Navigating to CNBC Pro news page...
+2025-05-03 20:26:26,585 - __main__ - INFO - Extracting news elements...
+2025-05-03 20:26:27,116 - __main__ - INFO - Extracting article links...
+2025-05-03 20:26:27,141 - __main__ - WARNING - Mismatch in number of links (0) and articles (17)
+2025-05-03 20:26:29,550 - __main__ - INFO - Successfully scraped 17 CNBC Pro stock news articles
+2025-05-03 20:26:29,550 - __main__ - INFO - Successfully scraped 17 articles
+2025-05-03 20:26:29,625 - __main__ - INFO - Stored raw article: Trade fight is an opportunity to invest in emerging markets, including China, Ariel’s Phillpotts says
+2025-05-03 20:26:29,626 - __main__ - WARNING - Skipping conversational generation for Trade fight is an opportunity to invest in emerging markets, including China, Ariel’s Phillpotts says due to missing content or model
+2025-05-03 20:26:29,635 - __main__ - INFO - Stored raw article: These overbought stocks could be due for a pause
+2025-05-03 20:26:29,636 - __main__ - WARNING - Skipping conversational generation for These overbought stocks could be due for a pause due to missing content or model
+2025-05-03 20:26:29,641 - __main__ - INFO - Stored raw article: Trade talks will be key next week for a market hoping to leave April 2 behind
+2025-05-03 20:26:29,642 - __main__ - WARNING - Skipping conversational generation for Trade talks will be key next week for a market hoping to leave April 2 behind due to missing content or model
+2025-05-03 20:26:29,646 - __main__ - INFO - Stored raw article: The stock market rebound is now a historic winning streak
+2025-05-03 20:26:29,647 - __main__ - WARNING - Skipping conversational generation for The stock market rebound is now a historic winning streak due to missing content or model
+2025-05-03 20:26:29,652 - __main__ - INFO - Stored raw article: These are Morningstar’s top-rated dividend ETFs in 2025
+2025-05-03 20:26:29,653 - __main__ - WARNING - Skipping conversational generation for These are Morningstar’s top-rated dividend ETFs in 2025 due to missing content or model
+2025-05-03 20:26:29,659 - __main__ - INFO - Stored raw article: Charts indicate what may happen next in long-running Coke-Pepsi stock battle
+2025-05-03 20:26:29,659 - __main__ - WARNING - Skipping conversational generation for Charts indicate what may happen next in long-running Coke-Pepsi stock battle due to missing content or model
+2025-05-03 20:26:29,664 - __main__ - INFO - Stored raw article: Why there’s likely more pain ahead for U.S. stocks, price watchers say
+2025-05-03 20:26:29,665 - __main__ - WARNING - Skipping conversational generation for Why there’s likely more pain ahead for U.S. stocks, price watchers say due to missing content or model
+2025-05-03 20:26:29,670 - __main__ - INFO - Stored raw article: Wall Street loves this under-the-radar Nvidia derivative play
+2025-05-03 20:26:29,671 - __main__ - WARNING - Skipping conversational generation for Wall Street loves this under-the-radar Nvidia derivative play due to missing content or model
+2025-05-03 20:26:29,677 - __main__ - INFO - Stored raw article: Ariel’s John Rogers says he’s been buying steadily throughout this downturn
+2025-05-03 20:26:29,678 - __main__ - WARNING - Skipping conversational generation for Ariel’s John Rogers says he’s been buying steadily throughout this downturn due to missing content or model
+2025-05-03 20:26:29,683 - __main__ - INFO - Stored raw article: Betting on a continued tech comeback with less risk using options
+2025-05-03 20:26:29,684 - __main__ - WARNING - Skipping conversational generation for Betting on a continued tech comeback with less risk using options due to missing content or model
+2025-05-03 20:26:29,691 - __main__ - INFO - Stored raw article: Morgan Stanley says this is the top pick to buy after Microsoft and Meta sound the all clear on AI spending
+2025-05-03 20:26:29,692 - __main__ - WARNING - Skipping conversational generation for Morgan Stanley says this is the top pick to buy after Microsoft and Meta sound the all clear on AI spending due to missing content or model
+2025-05-03 20:26:29,696 - __main__ - INFO - Stored raw article: Friday’s top analyst calls: Nvidia, Apple, Amazon, Airbnb, Reddit and more
+2025-05-03 20:26:29,697 - __main__ - WARNING - Skipping conversational generation for Friday’s top analyst calls: Nvidia, Apple, Amazon, Airbnb, Reddit and more due to missing content or model
+2025-05-03 20:26:29,703 - __main__ - INFO - Stored raw article: Strong jobs report eases Wall Street’s recession fears, at least for now
+2025-05-03 20:26:29,704 - __main__ - WARNING - Skipping conversational generation for Strong jobs report eases Wall Street’s recession fears, at least for now due to missing content or model
+2025-05-03 20:26:29,709 - __main__ - INFO - Stored raw article: Oppenheimer upgrades AutoZone to outperform as ‘attractive safe haven’ amid tariff woes
+2025-05-03 20:26:29,710 - __main__ - WARNING - Skipping conversational generation for Oppenheimer upgrades AutoZone to outperform as ‘attractive safe haven’ amid tariff woes due to missing content or model
+2025-05-03 20:26:29,716 - __main__ - INFO - Stored raw article: Amazon reported an earnings beat but issued light guidance. Here’s what analysts had to say
+2025-05-03 20:26:29,717 - __main__ - WARNING - Skipping conversational generation for Amazon reported an earnings beat but issued light guidance. Here’s what analysts had to say due to missing content or model
+2025-05-03 20:26:29,723 - __main__ - INFO - Stored raw article: Apple’s earnings topped expectations, but analysts were still left wanting more.
+2025-05-03 20:26:29,724 - __main__ - WARNING - Skipping conversational generation for Apple’s earnings topped expectations, but analysts were still left wanting more. due to missing content or model
+2025-05-03 20:26:29,729 - __main__ - INFO - Stored raw article: These two health-care names work in a ‘difficult’ market, says strategist
+2025-05-03 20:26:29,730 - __main__ - WARNING - Skipping conversational generation for These two health-care names work in a ‘difficult’ market, says strategist due to missing content or model
+2025-05-03 20:26:29,731 - __main__ - INFO - ===== CNBC Stock News Scraping Pipeline Completed =====
+2025-05-03 20:26:29,732 - __main__ - INFO - Total articles scraped: 17
+2025-05-03 20:26:29,733 - __main__ - INFO - Successfully processed articles: 0
+2025-05-03 20:26:29,734 - __main__ - INFO - Articles with errors: 0
+2025-05-03 20:33:45,495 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline =====
+2025-05-03 20:33:45,520 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-03 20:33:45,521 - __main__ - ERROR - GEMINI_API_KEY environment variable not set
+2025-05-03 20:34:22,242 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline =====
+2025-05-03 20:34:22,278 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-03 20:34:22,278 - __main__ - INFO - Gemini API configured successfully
+2025-05-03 20:34:22,278 - __main__ - INFO - Testing Gemini model: gemini-1.5-flash
+2025-05-03 20:34:23,827 - __main__ - INFO - Gemini model gemini-1.5-flash working. Response: Working
+...
+2025-05-03 20:34:23,828 - __main__ - INFO - Initializing web driver...
+2025-05-03 20:34:25,994 - __main__ - INFO - Navigating to CNBC Pro news page...
+2025-05-03 20:34:44,951 - __main__ - INFO - Extracting news elements...
+2025-05-03 20:34:49,787 - __main__ - INFO - Successfully scraped 17 CNBC Pro stock news articles
+2025-05-03 20:34:49,788 - __main__ - INFO - Successfully scraped 17 articles
+2025-05-03 20:34:49,791 - __main__ - INFO - URLs found: 17 out of 17
+2025-05-03 20:34:49,795 - __main__ - INFO - Fetching article content from: https://www.cnbc.com/2025/05/03/dont-ignore-china-even-in-a-trade-conflict-ariel-investor-says.html
+2025-05-03 20:35:23,222 - __main__ - WARNING - Error extracting content: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C143EFA5+77893]
+	GetHandleVerifier [0x00007FF6C143F000+77984]
+	(No symbol) [0x00007FF6C12091BA]
+	(No symbol) [0x00007FF6C125F16D]
+	(No symbol) [0x00007FF6C125F41C]
+	(No symbol) [0x00007FF6C12B2237]
+	(No symbol) [0x00007FF6C128716F]
+	(No symbol) [0x00007FF6C12AF07F]
+	(No symbol) [0x00007FF6C1286F03]
+	(No symbol) [0x00007FF6C1250328]
+	(No symbol) [0x00007FF6C1251093]
+	GetHandleVerifier [0x00007FF6C16F7B6D+2931725]
+	GetHandleVerifier [0x00007FF6C16F2132+2908626]
+	GetHandleVerifier [0x00007FF6C17100F3+3031443]
+	GetHandleVerifier [0x00007FF6C14591EA+184970]
+	GetHandleVerifier [0x00007FF6C146086F+215311]
+	GetHandleVerifier [0x00007FF6C1446EC4+110436]
+	GetHandleVerifier [0x00007FF6C1447072+110866]
+	GetHandleVerifier [0x00007FF6C142D479+5401]
+	BaseThreadInitThunk [0x00007FFF0A84E8D7+23]
+	RtlUserThreadStart [0x00007FFF0BC714FC+44]
+
+2025-05-03 20:35:25,700 - __main__ - WARNING - Could not extract content from https://www.cnbc.com/2025/05/03/dont-ignore-china-even-in-a-trade-conflict-ariel-investor-says.html
+2025-05-03 20:35:25,747 - __main__ - INFO - Stored raw article: Trade fight is an opportunity to invest in emerging markets, including China, Ariel’s Phillpotts says
+2025-05-03 20:35:25,747 - __main__ - WARNING - Skipping conversational generation for Trade fight is an opportunity to invest in emerging markets, including China, Ariel’s Phillpotts says due to missing content or model
+2025-05-03 20:35:25,750 - __main__ - INFO - Fetching article content from: https://www.cnbc.com/2025/05/03/these-overbought-stocks-could-be-due-for-a-pause.html
+2025-05-03 20:36:06,139 - __main__ - WARNING - Error extracting content: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C143EFA5+77893]
+	GetHandleVerifier [0x00007FF6C143F000+77984]
+	(No symbol) [0x00007FF6C12091BA]
+	(No symbol) [0x00007FF6C125F16D]
+	(No symbol) [0x00007FF6C125F41C]
+	(No symbol) [0x00007FF6C12B2237]
+	(No symbol) [0x00007FF6C128716F]
+	(No symbol) [0x00007FF6C12AF07F]
+	(No symbol) [0x00007FF6C1286F03]
+	(No symbol) [0x00007FF6C1250328]
+	(No symbol) [0x00007FF6C1251093]
+	GetHandleVerifier [0x00007FF6C16F7B6D+2931725]
+	GetHandleVerifier [0x00007FF6C16F2132+2908626]
+	GetHandleVerifier [0x00007FF6C17100F3+3031443]
+	GetHandleVerifier [0x00007FF6C14591EA+184970]
+	GetHandleVerifier [0x00007FF6C146086F+215311]
+	GetHandleVerifier [0x00007FF6C1446EC4+110436]
+	GetHandleVerifier [0x00007FF6C1447072+110866]
+	GetHandleVerifier [0x00007FF6C142D479+5401]
+	BaseThreadInitThunk [0x00007FFF0A84E8D7+23]
+	RtlUserThreadStart [0x00007FFF0BC714FC+44]
+
+2025-05-03 20:36:08,481 - __main__ - WARNING - Could not extract content from https://www.cnbc.com/2025/05/03/these-overbought-stocks-could-be-due-for-a-pause.html
+2025-05-03 20:36:08,485 - __main__ - INFO - Stored raw article: These overbought stocks could be due for a pause
+2025-05-03 20:36:08,486 - __main__ - WARNING - Skipping conversational generation for These overbought stocks could be due for a pause due to missing content or model
+2025-05-03 20:36:08,489 - __main__ - INFO - Fetching article content from: https://www.cnbc.com/2025/05/02/stock-market-next-week-outlook-for-may-5-9-2025.html
+2025-05-03 20:39:49,332 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline =====
+2025-05-03 20:39:49,355 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-03 20:39:49,356 - __main__ - INFO - Gemini API configured successfully
+2025-05-03 20:39:49,356 - __main__ - INFO - Testing Gemini model: gemini-1.5-flash
+2025-05-03 20:39:51,007 - __main__ - INFO - Gemini model gemini-1.5-flash working. Response: Working
+...
+2025-05-03 20:39:51,007 - __main__ - INFO - Initializing web driver...
+2025-05-03 20:39:52,863 - __main__ - INFO - Navigating to CNBC Pro news page...
+2025-05-03 20:40:09,231 - __main__ - INFO - Extracting news elements...
+2025-05-03 20:40:13,746 - __main__ - INFO - Successfully scraped 17 CNBC Pro stock news articles
+2025-05-03 20:40:13,747 - __main__ - INFO - Successfully scraped 17 articles
+2025-05-03 20:40:13,748 - __main__ - INFO - URLs found: 17 out of 17
+2025-05-03 20:40:13,750 - __main__ - INFO - Fetching article content from: https://www.cnbc.com/2025/05/03/dont-ignore-china-even-in-a-trade-conflict-ariel-investor-says.html
+2025-05-03 20:40:39,110 - __main__ - WARNING - Error extracting content: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C143EFA5+77893]
+	GetHandleVerifier [0x00007FF6C143F000+77984]
+	(No symbol) [0x00007FF6C12091BA]
+	(No symbol) [0x00007FF6C125F16D]
+	(No symbol) [0x00007FF6C125F41C]
+	(No symbol) [0x00007FF6C12B2237]
+	(No symbol) [0x00007FF6C128716F]
+	(No symbol) [0x00007FF6C12AF07F]
+	(No symbol) [0x00007FF6C1286F03]
+	(No symbol) [0x00007FF6C1250328]
+	(No symbol) [0x00007FF6C1251093]
+	GetHandleVerifier [0x00007FF6C16F7B6D+2931725]
+	GetHandleVerifier [0x00007FF6C16F2132+2908626]
+	GetHandleVerifier [0x00007FF6C17100F3+3031443]
+	GetHandleVerifier [0x00007FF6C14591EA+184970]
+	GetHandleVerifier [0x00007FF6C146086F+215311]
+	GetHandleVerifier [0x00007FF6C1446EC4+110436]
+	GetHandleVerifier [0x00007FF6C1447072+110866]
+	GetHandleVerifier [0x00007FF6C142D479+5401]
+	BaseThreadInitThunk [0x00007FFF0A84E8D7+23]
+	RtlUserThreadStart [0x00007FFF0BC714FC+44]
+
+2025-05-03 20:40:41,486 - __main__ - WARNING - Could not extract content from https://www.cnbc.com/2025/05/03/dont-ignore-china-even-in-a-trade-conflict-ariel-investor-says.html
+2025-05-03 20:40:41,518 - __main__ - INFO - Stored raw article: Trade fight is an opportunity to invest in emerging markets, including China, Ariel’s Phillpotts says
+2025-05-03 20:40:41,519 - __main__ - WARNING - Skipping conversational generation for Trade fight is an opportunity to invest in emerging markets, including China, Ariel’s Phillpotts says due to missing content or model
+2025-05-03 20:40:41,521 - __main__ - INFO - Fetching article content from: https://www.cnbc.com/2025/05/03/these-overbought-stocks-could-be-due-for-a-pause.html
+2025-05-03 20:41:06,920 - __main__ - WARNING - Error extracting content: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C143EFA5+77893]
+	GetHandleVerifier [0x00007FF6C143F000+77984]
+	(No symbol) [0x00007FF6C12091BA]
+	(No symbol) [0x00007FF6C125F16D]
+	(No symbol) [0x00007FF6C125F41C]
+	(No symbol) [0x00007FF6C12B2237]
+	(No symbol) [0x00007FF6C128716F]
+	(No symbol) [0x00007FF6C12AF07F]
+	(No symbol) [0x00007FF6C1286F03]
+	(No symbol) [0x00007FF6C1250328]
+	(No symbol) [0x00007FF6C1251093]
+	GetHandleVerifier [0x00007FF6C16F7B6D+2931725]
+	GetHandleVerifier [0x00007FF6C16F2132+2908626]
+	GetHandleVerifier [0x00007FF6C17100F3+3031443]
+	GetHandleVerifier [0x00007FF6C14591EA+184970]
+	GetHandleVerifier [0x00007FF6C146086F+215311]
+	GetHandleVerifier [0x00007FF6C1446EC4+110436]
+	GetHandleVerifier [0x00007FF6C1447072+110866]
+	GetHandleVerifier [0x00007FF6C142D479+5401]
+	BaseThreadInitThunk [0x00007FFF0A84E8D7+23]
+	RtlUserThreadStart [0x00007FFF0BC714FC+44]
+
+2025-05-03 20:41:09,676 - __main__ - WARNING - Could not extract content from https://www.cnbc.com/2025/05/03/these-overbought-stocks-could-be-due-for-a-pause.html
+2025-05-03 20:41:09,679 - __main__ - INFO - Stored raw article: These overbought stocks could be due for a pause
+2025-05-03 20:41:09,680 - __main__ - WARNING - Skipping conversational generation for These overbought stocks could be due for a pause due to missing content or model
+2025-05-03 20:41:09,682 - __main__ - INFO - Fetching article content from: https://www.cnbc.com/2025/05/02/stock-market-next-week-outlook-for-may-5-9-2025.html
+2025-05-03 20:41:34,101 - __main__ - WARNING - Error extracting content: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C143EFA5+77893]
+	GetHandleVerifier [0x00007FF6C143F000+77984]
+	(No symbol) [0x00007FF6C12091BA]
+	(No symbol) [0x00007FF6C125F16D]
+	(No symbol) [0x00007FF6C125F41C]
+	(No symbol) [0x00007FF6C12B2237]
+	(No symbol) [0x00007FF6C128716F]
+	(No symbol) [0x00007FF6C12AF07F]
+	(No symbol) [0x00007FF6C1286F03]
+	(No symbol) [0x00007FF6C1250328]
+	(No symbol) [0x00007FF6C1251093]
+	GetHandleVerifier [0x00007FF6C16F7B6D+2931725]
+	GetHandleVerifier [0x00007FF6C16F2132+2908626]
+	GetHandleVerifier [0x00007FF6C17100F3+3031443]
+	GetHandleVerifier [0x00007FF6C14591EA+184970]
+	GetHandleVerifier [0x00007FF6C146086F+215311]
+	GetHandleVerifier [0x00007FF6C1446EC4+110436]
+	GetHandleVerifier [0x00007FF6C1447072+110866]
+	GetHandleVerifier [0x00007FF6C142D479+5401]
+	BaseThreadInitThunk [0x00007FFF0A84E8D7+23]
+	RtlUserThreadStart [0x00007FFF0BC714FC+44]
+
+2025-05-03 20:41:36,602 - __main__ - WARNING - Could not extract content from https://www.cnbc.com/2025/05/02/stock-market-next-week-outlook-for-may-5-9-2025.html
+2025-05-03 20:41:36,604 - __main__ - INFO - Stored raw article: Trade talks will be key next week for a market hoping to leave April 2 behind
+2025-05-03 20:41:36,605 - __main__ - WARNING - Skipping conversational generation for Trade talks will be key next week for a market hoping to leave April 2 behind due to missing content or model
+2025-05-03 20:41:36,607 - __main__ - INFO - Fetching article content from: https://www.cnbc.com/2025/05/02/the-stock-market-rebound-is-now-a-historic-winning-streak.html
+2025-05-03 20:43:22,841 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline (Headline Only) =====
+2025-05-03 20:43:22,872 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-03 20:43:22,872 - __main__ - ERROR - GEMINI_API_KEY environment variable not set
+2025-05-03 20:44:05,441 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline (Headline Only) =====
+2025-05-03 20:44:05,459 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-03 20:44:05,459 - __main__ - INFO - Gemini API configured successfully
+2025-05-03 20:44:05,459 - __main__ - INFO - Testing Gemini model: gemini-1.5-flash
+2025-05-03 20:47:32,113 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline (Headline Only) =====
+2025-05-03 20:47:32,189 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-03 20:47:32,190 - __main__ - INFO - Gemini API configured successfully
+2025-05-03 20:47:32,190 - __main__ - INFO - Testing Gemini model: gemini-1.5-flash
+2025-05-03 20:47:33,886 - __main__ - INFO - Gemini model gemini-1.5-flash working. Response: Working
+...
+2025-05-03 20:47:33,887 - __main__ - INFO - Initializing web driver...
+2025-05-03 20:47:35,936 - __main__ - INFO - Navigating to CNBC Pro news page...
+2025-05-03 20:47:50,021 - __main__ - INFO - Extracting news elements...
+2025-05-03 20:47:53,072 - __main__ - INFO - Successfully scraped 17 CNBC Pro stock news articles
+2025-05-03 20:47:53,073 - __main__ - INFO - Successfully scraped 17 headlines
+2025-05-03 20:47:53,080 - __main__ - INFO - Stored raw article: Trade fight is an opportunity to invest in emerging markets, including China, Ariel’s Phillpotts says
+2025-05-03 20:47:54,738 - __main__ - INFO - Stored conversational script for: Trade fight is an opportunity to invest in emerging markets, including China, Ariel’s Phillpotts says
+2025-05-03 20:47:54,743 - __main__ - INFO - Stored raw article: These overbought stocks could be due for a pause
+2025-05-03 20:47:56,349 - __main__ - INFO - Stored conversational script for: These overbought stocks could be due for a pause
+2025-05-03 20:47:56,351 - __main__ - INFO - Stored raw article: Trade talks will be key next week for a market hoping to leave April 2 behind
+2025-05-03 20:47:57,785 - __main__ - INFO - Stored conversational script for: Trade talks will be key next week for a market hoping to leave April 2 behind
+2025-05-03 20:47:57,790 - __main__ - INFO - Stored raw article: The stock market rebound is now a historic winning streak
+2025-05-03 20:47:59,157 - __main__ - INFO - Stored conversational script for: The stock market rebound is now a historic winning streak
+2025-05-03 20:47:59,161 - __main__ - INFO - Stored raw article: These are Morningstar’s top-rated dividend ETFs in 2025
+2025-05-03 20:48:00,650 - __main__ - INFO - Stored conversational script for: These are Morningstar’s top-rated dividend ETFs in 2025
+2025-05-03 20:48:00,654 - __main__ - INFO - Stored raw article: Charts indicate what may happen next in long-running Coke-Pepsi stock battle
+2025-05-03 20:48:02,031 - __main__ - INFO - Stored conversational script for: Charts indicate what may happen next in long-running Coke-Pepsi stock battle
+2025-05-03 20:48:02,034 - __main__ - INFO - Stored raw article: Why there’s likely more pain ahead for U.S. stocks, price watchers say
+2025-05-03 20:48:03,312 - __main__ - INFO - Stored conversational script for: Why there’s likely more pain ahead for U.S. stocks, price watchers say
+2025-05-03 20:48:03,314 - __main__ - INFO - Stored raw article: Wall Street loves this under-the-radar Nvidia derivative play
+2025-05-03 20:48:04,850 - __main__ - INFO - Stored conversational script for: Wall Street loves this under-the-radar Nvidia derivative play
+2025-05-03 20:48:04,853 - __main__ - INFO - Stored raw article: Ariel’s John Rogers says he’s been buying steadily throughout this downturn
+2025-05-03 20:48:06,386 - __main__ - INFO - Stored conversational script for: Ariel’s John Rogers says he’s been buying steadily throughout this downturn
+2025-05-03 20:48:06,390 - __main__ - INFO - Stored raw article: Betting on a continued tech comeback with less risk using options
+2025-05-03 20:48:07,727 - __main__ - INFO - Stored conversational script for: Betting on a continued tech comeback with less risk using options
+2025-05-03 20:48:07,732 - __main__ - INFO - Stored raw article: Morgan Stanley says this is the top pick to buy after Microsoft and Meta sound the all clear on AI spending
+2025-05-03 20:48:09,283 - __main__ - INFO - Stored conversational script for: Morgan Stanley says this is the top pick to buy after Microsoft and Meta sound the all clear on AI spending
+2025-05-03 20:48:09,288 - __main__ - INFO - Stored raw article: Friday’s top analyst calls: Nvidia, Apple, Amazon, Airbnb, Reddit and more
+2025-05-03 20:48:10,713 - __main__ - INFO - Stored conversational script for: Friday’s top analyst calls: Nvidia, Apple, Amazon, Airbnb, Reddit and more
+2025-05-03 20:48:10,718 - __main__ - INFO - Stored raw article: Strong jobs report eases Wall Street’s recession fears, at least for now
+2025-05-03 20:48:12,221 - __main__ - INFO - Stored conversational script for: Strong jobs report eases Wall Street’s recession fears, at least for now
+2025-05-03 20:48:12,225 - __main__ - INFO - Stored raw article: Oppenheimer upgrades AutoZone to outperform as ‘attractive safe haven’ amid tariff woes
+2025-05-03 20:48:13,752 - __main__ - INFO - Stored conversational script for: Oppenheimer upgrades AutoZone to outperform as ‘attractive safe haven’ amid tariff woes
+2025-05-03 20:48:13,756 - __main__ - INFO - Stored raw article: Amazon reported an earnings beat but issued light guidance. Here’s what analysts had to say
+2025-05-03 20:48:15,042 - __main__ - INFO - Stored conversational script for: Amazon reported an earnings beat but issued light guidance. Here’s what analysts had to say
+2025-05-03 20:48:15,045 - __main__ - INFO - Stored raw article: Apple’s earnings topped expectations, but analysts were still left wanting more.
