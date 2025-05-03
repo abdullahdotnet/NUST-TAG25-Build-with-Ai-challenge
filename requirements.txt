@@ -1,0 +1,11 @@
+streamlit
+pyttsx3
+gTTS
+edge-tts
+librosa
+soundfile
+moviepy
+opencv-python
+numpy
+pillow
+requests
