@@ -24,8 +24,8 @@ logger = logging.getLogger(__name__)
 
 # API Configuration - prefer environment variables but fall back to hardcoded values
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
-NEWS_API_KEY = os.getenv("NEWS_API_KEY", 'd59d6c32e56e49bab7f3547283d83ebe')
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", 'AIzaSyDAD-pjOjF2O_YTJeGA53R8IiQLW1IixKY')
+NEWS_API_KEY = os.getenv("NEWS_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # Initialize MongoDB with error handling
 try:
@@ -78,7 +78,7 @@ def test_gemini_api():
     """Test if Gemini API is working correctly"""
     try:
         # Try simple models first
-        models = ["gemini-1.0-pro", "gemini-1.5-flash"]
+        models = ["gemini-1.5-flash"]
         
         for model_name in models:
             try:
