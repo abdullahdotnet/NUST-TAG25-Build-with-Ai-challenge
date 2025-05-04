@@ -11,6 +11,7 @@ from typing import List, Dict
 import os
 import re
 from glob import glob
+import random  # Added import for random shuffling
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -90,7 +91,7 @@ async def root():
 
 @app.get("/news/videos", response_model=NewsResponse)
 async def get_news_videos(limit: int = 10):
-    """Get the first N video URLs from news files."""
+    """Get randomly shuffled video URLs from news files."""
     # Check if news folder exists
     if not os.path.exists(NEWS_FOLDER):
         raise HTTPException(status_code=404, detail=f"News folder not found at {NEWS_FOLDER}")
@@ -107,10 +108,10 @@ async def get_news_videos(limit: int = 10):
             detail=f"No news files found. Found files: {all_files}"
         )
     
-    # Sort files by number
-    files.sort(key=get_file_number)
+    # Randomly shuffle the files
+    random.shuffle(files)
     
-    # Process first N files
+    # Process first N files (after shuffling)
     videos = []
     for filepath in files[:limit]:
         file_number = get_file_number(os.path.basename(filepath))
