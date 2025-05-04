@@ -129,7 +129,7 @@ def did_upload_audio_with_failover(mp3_bytes: bytes, filename: str, did_credenti
     
     raise RuntimeError("All D-ID credentials failed for audio upload")
 
-def did_create_video_with_failover(audio_url: str, image_or_presenter: dict, did_credentials: List[str]) -> str:
+def did_create_video_with_failover(audio_url: str, image_or_presenter: dict, did_credentials: List[str], add_subtitles: bool = True) -> str:
     """Create talking-avatar video with D-ID with failover."""
     for attempt, credential in enumerate(did_credentials):
         try:
@@ -143,6 +143,9 @@ def did_create_video_with_failover(audio_url: str, image_or_presenter: dict, did
                 "script": {
                     "type": "audio",
                     "audio_url": audio_url
+                },
+                "config": {
+                    "auto_subtitles": add_subtitles  # Enable automatic subtitles
                 }
             }
             headers = {"Content-Type": "application/json", "Accept": "application/json"}
@@ -151,14 +154,13 @@ def did_create_video_with_failover(audio_url: str, image_or_presenter: dict, did
             if r.status_code == 201:
                 return r.json()["id"]
             else:
-                print(f"   ⚠️ D-ID credential {attempt + 1} failed: {r.status_code}")
+                print(f"   ⚠ D-ID credential {attempt + 1} failed: {r.status_code}")
                 continue
         except Exception as e:
-            print(f"   ⚠️ D-ID credential {attempt + 1} error: {str(e)}")
+            print(f"   ⚠ D-ID credential {attempt + 1} error: {str(e)}")
             continue
     
-    raise RuntimeError("All D-ID credentials failed for video creation")
-
+    raise RuntimeError("All D-ID credentials failed for video creation")
 def did_poll_video_with_failover(video_id: str, did_credentials: List[str], timeout: int = 600) -> str:
     """Poll D-ID until video is ready with failover."""
     # Use the same credential that created the video
@@ -244,7 +246,7 @@ def generate_news_bulletin(mongo_url: str, db_name: str, collection_name: str):
     
     # Fetch latest news
     print("📰 Fetching latest news from MongoDB...")
-    news_items = fetch_latest_news(mongo_url, db_name, collection_name)
+    news_items = fetch_latest_news(mongo_url, db_name, collection_name,limit=2)
     
     if not news_items:
         print("❌ No news items found in database!")
