@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 # Configuration from environment variables
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY",'AIzaSyDAD-pjOjF2O_YTJeGA53R8IiQLW1IixKY')
 
 def web_driver():
     """Initialize and configure Chrome webdriver"""
