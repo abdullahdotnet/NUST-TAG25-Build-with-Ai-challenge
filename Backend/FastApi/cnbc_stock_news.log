@@ -1,0 +1,35 @@
+2025-05-04 11:45:19,888 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline (Headline Only) =====
+2025-05-04 11:45:19,910 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-04 11:45:19,910 - __main__ - ERROR - GEMINI_API_KEY environment variable not set
+2025-05-04 11:46:01,776 - __main__ - INFO - ===== Starting CNBC Stock News Scraping Pipeline (Headline Only) =====
+2025-05-04 11:46:01,804 - __main__ - INFO - Successfully connected to MongoDB
+2025-05-04 11:46:01,805 - __main__ - INFO - Gemini API configured successfully
+2025-05-04 11:46:01,807 - __main__ - INFO - Testing Gemini model: gemini-1.5-flash
+2025-05-04 11:46:03,148 - __main__ - INFO - Gemini model gemini-1.5-flash working. Response: Working
+...
+2025-05-04 11:46:03,149 - __main__ - INFO - Initializing web driver...
+2025-05-04 11:46:05,709 - __main__ - INFO - Navigating to CNBC Pro news page...
+2025-05-04 11:46:17,555 - __main__ - INFO - Extracting news elements...
+2025-05-04 11:46:20,756 - __main__ - INFO - Successfully scraped 17 CNBC Pro stock news articles
+2025-05-04 11:46:20,757 - __main__ - INFO - Successfully scraped 17 headlines
+2025-05-04 11:46:20,759 - __main__ - INFO - Article already exists: Trade fight is an opportunity to invest in emerging markets, including China, Ariel’s Phillpotts says
+2025-05-04 11:46:20,763 - __main__ - INFO - Article already exists: These overbought stocks could be due for a pause
+2025-05-04 11:46:20,764 - __main__ - INFO - Article already exists: Trade talks will be key next week for a market hoping to leave April 2 behind
+2025-05-04 11:46:20,766 - __main__ - INFO - Article already exists: The stock market rebound is now a historic winning streak
+2025-05-04 11:46:20,767 - __main__ - INFO - Article already exists: These are Morningstar’s top-rated dividend ETFs in 2025
+2025-05-04 11:46:20,769 - __main__ - INFO - Article already exists: Charts indicate what may happen next in long-running Coke-Pepsi stock battle
+2025-05-04 11:46:20,770 - __main__ - INFO - Article already exists: Why there’s likely more pain ahead for U.S. stocks, price watchers say
+2025-05-04 11:46:20,771 - __main__ - INFO - Article already exists: Wall Street loves this under-the-radar Nvidia derivative play
+2025-05-04 11:46:20,773 - __main__ - INFO - Article already exists: Ariel’s John Rogers says he’s been buying steadily throughout this downturn
+2025-05-04 11:46:20,774 - __main__ - INFO - Article already exists: Betting on a continued tech comeback with less risk using options
+2025-05-04 11:46:20,776 - __main__ - INFO - Article already exists: Morgan Stanley says this is the top pick to buy after Microsoft and Meta sound the all clear on AI spending
+2025-05-04 11:46:20,777 - __main__ - INFO - Article already exists: Friday’s top analyst calls: Nvidia, Apple, Amazon, Airbnb, Reddit and more
+2025-05-04 11:46:20,778 - __main__ - INFO - Article already exists: Strong jobs report eases Wall Street’s recession fears, at least for now
+2025-05-04 11:46:20,780 - __main__ - INFO - Article already exists: Oppenheimer upgrades AutoZone to outperform as ‘attractive safe haven’ amid tariff woes
+2025-05-04 11:46:20,784 - __main__ - INFO - Article already exists: Amazon reported an earnings beat but issued light guidance. Here’s what analysts had to say
+2025-05-04 11:46:20,786 - __main__ - INFO - Article already exists: Apple’s earnings topped expectations, but analysts were still left wanting more.
+2025-05-04 11:46:20,788 - __main__ - INFO - Article already exists: These two health-care names work in a ‘difficult’ market, says strategist
+2025-05-04 11:46:20,788 - __main__ - INFO - ===== CNBC Stock News Scraping Pipeline Completed =====
+2025-05-04 11:46:20,788 - __main__ - INFO - Total headlines scraped: 17
+2025-05-04 11:46:20,788 - __main__ - INFO - Successfully processed conversational scripts: 0
+2025-05-04 11:46:20,788 - __main__ - INFO - Articles with errors: 0
