@@ -246,7 +246,7 @@ def generate_news_bulletin(mongo_url: str, db_name: str, collection_name: str):
     
     # Fetch latest news
     print("📰 Fetching latest news from MongoDB...")
-    news_items = fetch_latest_news(mongo_url, db_name, collection_name,limit=2)
+    news_items = fetch_latest_news(mongo_url, db_name, collection_name,limit=1)
     
     if not news_items:
         print("❌ No news items found in database!")
