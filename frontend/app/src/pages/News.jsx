@@ -1,91 +1,105 @@
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
-import { FiPlay, FiPause, FiVolume2, FiShare2, FiGlobe, FiClock, FiEye } from "react-icons/fi";
+import { useRef, useState, useEffect } from "react";
+import { FiVolume2, FiClock, FiEye } from "react-icons/fi";
 
 const News = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [newsItems, setNewsItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [activeCategory, setActiveCategory] = useState("all");
-  const videoRef = useRef(null);
   const [currentNews, setCurrentNews] = useState(0);
+  const videoRef = useRef(null);
 
   const categories = [
-    { id: "all", name: "All News" },
-    { id: "politics", name: "Politics" },
-    { id: "technology", name: "Technology" },
-    { id: "sports", name: "Sports" },
-    { id: "business", name: "Business" },
+    { id: "English", name: "English" },
+    { id: "Urdu", name: "Urdu" },
+  
   ];
 
-  const newsItems = [
-    {
-      id: 1,
-      title: "Global Summit Addresses Climate Change Crisis",
-      category: "politics",
-      duration: "2:45",
-      views: "1.2M",
-      timestamp: "10 min ago",
-      avatar: "female",
-      excerpt: "World leaders commit to unprecedented emissions reductions at emergency summit",
-      videoUrl: "/news-climate.mp4",
-      transcript: [
-        "AI Anchor: Breaking news from the Global Climate Summit...",
-        "The historic agreement includes binding targets for all major economies...",
-        "Scientists warn this may be our last chance to avoid catastrophic warming..."
-      ]
-    },
-    {
-      id: 2,
-      title: "Quantum Computing Breakthrough Announced",
-      category: "technology",
-      duration: "3:12",
-      views: "2.4M",
-      timestamp: "25 min ago",
-      avatar: "male",
-      excerpt: "Researchers achieve quantum supremacy with new 128-qubit processor design",
-      videoUrl: "/news-quantum.mp4",
-      transcript: [
-        "AI Anchor: A major milestone in computing technology...",
-        "The new processor solved in minutes what would take traditional supercomputers years...",
-        "Potential applications include medicine, cryptography, and AI development..."
-      ]
-    },
-    {
-      id: 3,
-      title: "National Team Wins World Championship",
-      category: "sports",
-      duration: "1:58",
-      views: "3.1M",
-      timestamp: "1 hour ago",
-      avatar: "female",
-      excerpt: "Underdog victory shocks sports world with last-minute goal",
-      videoUrl: "/news-sports.mp4",
-      transcript: [
-        "AI Anchor: An incredible moment in sports history...",
-        "The underdog team overcame 3-1 deficit in final minutes...",
-        "Captain dedicated the win to their late coach..."
-      ]
-    }
-  ];
+  useEffect(() => {
+    const fetchNewsVideos = async () => {
+      try {
+        console.log('Attempting to fetch from:', 'http://127.0.0.1:8000/news/videos?limit=10');
+        const response = await fetch('http://localhost:8000/news/videos?limit=10');
+        if (!response.ok) {
+          throw new Error('Failed to fetch news videos');
+        }
+        const data = await response.json();
+         
+        const transformedData = data.videos.map((video, index) => ({
+          id: video.video_id,
+          title: video.title,
+          category: video.source.toLowerCase(),
+          duration: "2:45", 
+          views: `${Math.floor(Math.random() * 5) + 1}M`, 
+          avatar: index % 2 === 0 ? "female" : "male",
+          excerpt: video.script.split('\n')[0] || "No excerpt available",
+          videoUrl: video.video_url,
+          transcript: video.script.split('\n').filter(line => line.trim() !== '')
+        }));
 
-  const togglePlayback = () => {
-    const video = videoRef.current;
-    if (!video) return;
+        setNewsItems(transformedData);
+        setIsLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setIsLoading(false);
+      }
+    };
 
-    if (isPlaying) {
-      video.pause();
-    } else {
-      video.play();
-    }
-    setIsPlaying(!isPlaying);
+    fetchNewsVideos();
+  }, []);
+
+  // Handle video ended event
+  const handleVideoEnd = () => {
+    const nextIndex = (currentNews + 1) % newsItems.length;
+    setCurrentNews(nextIndex);
   };
+
+  // Set up and clean up event listener
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.addEventListener('ended', handleVideoEnd);
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('ended', handleVideoEnd);
+      }
+    };
+  }, [currentNews, newsItems.length]); // Dependencies ensure proper cleanup and setup
 
   const selectNewsItem = (index) => {
     setCurrentNews(index);
-    setIsPlaying(false);
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
+      videoRef.current.play().catch(e => console.log("Autoplay prevented:", e));
     }
   };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+        <div className="text-xl">Loading news...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+        <div className="text-xl text-red-500">Error: {error}</div>
+      </div>
+    );
+  }
+
+  if (newsItems.length === 0) {
+    return (
+      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+        <div className="text-xl">No news videos available</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
@@ -179,74 +193,39 @@ const News = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-gray-900/80 backdrop-blur-md border border-gray-800 rounded-xl shadow-2xl overflow-hidden"
               >
-                <div className="relative pt-[56.25%] bg-black">
+                <div className="relative w-full aspect-video bg-black">
                   <video
                     ref={videoRef}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    src={newsItems[currentNews].videoUrl}
+                    className="absolute inset-0 w-full h-full object-contain"
+                    src={newsItems[currentNews]?.videoUrl}
+                    autoPlay
+                    controls
+                    playsInline
                   />
-                  {!isPlaying && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="bg-blue-600/80 hover:bg-blue-700/80 rounded-full p-4"
-                        onClick={togglePlayback}
-                      >
-                        <FiPlay size={32} />
-                      </motion.button>
-                    </div>
-                  )}
                 </div>
-
-                <div className="p-4 bg-gradient-to-r from-blue-900/80 to-indigo-900/80 border-t border-gray-800">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="text-white"
-                        onClick={togglePlayback}
-                      >
-                        {isPlaying ? <FiPause size={24} /> : <FiPlay size={24} />}
-                      </motion.button>
-                      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="text-white">
-                        <FiVolume2 size={20} />
-                      </motion.button>
-                      <div className="text-white text-sm">1:24 / {newsItems[currentNews].duration}</div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="text-white flex items-center text-sm">
-                        <FiGlobe className="mr-2" /> EN
-                      </motion.button>
-                      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="text-white flex items-center text-sm">
-                        <FiShare2 className="mr-2" /> Share
-                      </motion.button>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-900/30 text-blue-400">
-                        {newsItems[currentNews].category}
+                        {newsItems[currentNews]?.category}
                       </span>
-                      <h2 className="mt-2 text-xl font-bold text-white">{newsItems[currentNews].title}</h2>
+                      <h2 className="mt-2 text-xl font-bold text-white">{newsItems[currentNews]?.title}</h2>
                     </div>
                     <div className="text-sm text-gray-400 flex items-center">
-                      <FiClock className="mr-1" size={14} />
-                      <span className="mr-3">{newsItems[currentNews].timestamp}</span>
                       <FiEye className="mr-1" size={14} />
-                      <span>{newsItems[currentNews].views}</span>
+                      <span>{newsItems[currentNews]?.views}</span>
                     </div>
                   </div>
 
                   <div className="mt-6">
                     <h3 className="text-lg font-medium text-white mb-3">Transcript</h3>
                     <div className="space-y-3">
-                      {newsItems[currentNews].transcript.map((line, i) => (
-                        <motion.div key={i} whileHover={{ backgroundColor: "rgba(37, 99, 235, 0.2)" }} className="p-3 rounded-lg border border-gray-800">
+                      {newsItems[currentNews]?.transcript.map((line, i) => (
+                        <motion.div 
+                          key={i} 
+                          whileHover={{ backgroundColor: "rgba(37, 99, 235, 0.2)" }} 
+                          className="p-3 rounded-lg border border-gray-800"
+                        >
                           <p className="text-gray-300">{line}</p>
                         </motion.div>
                       ))}
