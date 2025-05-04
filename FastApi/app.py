@@ -6,7 +6,8 @@ FastAPI service to serve video URLs from news text files.
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from typing import List, Dict, Optional
+from fastapi.middleware.cors import CORSMiddleware
+from typing import List, Dict
 import os
 import re
 from glob import glob
@@ -20,6 +21,14 @@ app = FastAPI(
 
 # Configuration
 NEWS_FOLDER = "news"
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Response model
 class NewsVideo(BaseModel):
@@ -113,7 +122,8 @@ async def get_news_video_by_id(video_id: int):
     filepath = os.path.join(NEWS_FOLDER, f"news_video_{video_id}.txt")
     
     if not os.path.exists(filepath):
-        raise HTTPException(status_code=404, detail=f"News video {video_id} not found")
+        raise HTTPException(status_code=404, detail=f"News video {video_id} not found")\
+        
     
     info = parse_news_file(filepath)
     
@@ -154,7 +164,6 @@ async def get_news_summary():
         "videos": summary
     }
 
-# Run with: uvicorn news_api:app --reload
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
