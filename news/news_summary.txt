@@ -1,0 +1,46 @@
+NEWS BULLETIN SUMMARY
+====================
+
+Generated on: 2025-05-04 07:54:06
+Total stories processed: 10
+
+Story 1 (File #4): Clippers 111-105 Nuggets (May 1, 2025) Game Recap - ESPN
+Source: ESPN
+Details file: news_video_4.txt
+--------------------------------------------------
+Story 2 (File #5): Angels To Place Mike Trout On 10-Day Injured List With Bone Bruise - MLB Trade Rumors
+Source: MLB Trade Rumors
+Details file: news_video_5.txt
+--------------------------------------------------
+Story 3 (File #6): Knicks' Jalen Brunson plays hero again, eliminating Pistons and showing why he's Clutch Player of the Year - CBS Sports
+Source: CBS Sports
+Details file: news_video_6.txt
+--------------------------------------------------
+Story 4 (File #7): Game 6 FINAL – Kings 4, Oilers 6 – Kopitar, Kempe, Hiller - LA Kings Insider
+Source: lakingsinsider.com
+Details file: news_video_7.txt
+--------------------------------------------------
+Story 5 (File #8): Start times for 1st round games on May 3, 4 - NHL.com
+Source: NHL News
+Details file: news_video_8.txt
+--------------------------------------------------
+Story 6 (File #9): Billions of iPhone users at risk of dangerous malware attack — newly-found flaw warning issued - New York Post
+Source: New York Post
+Details file: news_video_9.txt
+--------------------------------------------------
+Story 7 (File #10): Some Nintendo Switch users impacted by error code 2206-1015 following system update - Nintendo Everything
+Source: Nintendoeverything.com
+Details file: news_video_10.txt
+--------------------------------------------------
+Story 8 (File #11): ICYMI: 12 Switch Games Will Receive Free Switch 2 Upgrades - Nintendo Life
+Source: Nintendo Life
+Details file: news_video_11.txt
+--------------------------------------------------
+Story 9 (File #12): French President Macron Congratulates Clair Obscur: Expedition 33 Developer For Creating 'One of the Best-Rated Games in History' - IGN
+Source: IGN
+Details file: news_video_12.txt
+--------------------------------------------------
+Story 10 (File #13): The Chromecast is back, but not as we know it - The Verge
+Source: The Verge
+Details file: news_video_13.txt
+--------------------------------------------------
